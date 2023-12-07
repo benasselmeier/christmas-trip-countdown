@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'christmas-trip-countdown';
+  imageFrontPath = 'sdc-front-entrance-wreath.jpg';
+  
 }
