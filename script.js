@@ -25,4 +25,39 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('countdown').innerHTML = 'EXPIRED';
         }
     }, 1000);
+
+    let slides = Array.from(document.querySelectorAll('.images'));
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            let j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.opacity = i === index ? '1' : '0';
+        });
+    }
+
+    function nextSlide() {
+        currentSlide++;
+        if (currentSlide >= slides.length) {
+            shuffleArray(slides);
+            currentSlide = 0;
+        }
+        showSlide(currentSlide);
+    }
+
+    document.getElementById('playButton').addEventListener('click', function() {
+        document.querySelector('.slideshow-container').style.display = 'flex';
+        document.querySelector('.startContainer').style.display = 'none';
+        // Start the slideshow here...
+    });
+
+    showSlide(currentSlide); // Show the first slide initially
+    setInterval(nextSlide, 5000); // Change slide every 5 seconds
 });
