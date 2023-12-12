@@ -2,6 +2,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Set the date we're counting down to (replace with your vacation date)
     var countDownDate = new Date('Dec 31, 2023 00:00:00').getTime();
 
+    var audio = new Audio('freezeezy-peak.mp3');
+
+    audio.loop = true;
+    audio.volume = 0.5;
+
+
+
     // Update the countdown every 1 second
     var x = setInterval(function () {
         // Get the current date and time
@@ -53,9 +60,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     document.getElementById('playButton').addEventListener('click', function() {
-        document.querySelector('.slideshow-container').style.display = 'flex';
-        document.querySelector('.startContainer').style.display = 'none';
-        // Start the slideshow here...
+        document.querySelector('.content-container').style.display = 'flex';
+        audio.play();
     });
 
     showSlide(currentSlide); // Show the first slide initially
