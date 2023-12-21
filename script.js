@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Set the date we're counting down to (replace with your vacation date)
-    var countDownDate = new Date('Dec 31, 2023 00:00:00').getTime();
+    var countDownDate = new Date('Dec 27, 2023 08:30:00').getTime();
 
     var audio = new Audio('freezeezy-peak.mp3');
 
