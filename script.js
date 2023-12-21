@@ -1,8 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Set the date we're counting down to (replace with your vacation date)
     var countDownDate = new Date('Dec 27, 2023 08:30:00').getTime();
-
-    var audio = new Audio('freezeezy-peak.mp3');
+    var audio = new Audio('ccw_winter.mp3');
 
     audio.loop = true;
     audio.volume = 0.5;
@@ -62,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('playButton').addEventListener('click', function() {
         document.querySelector('.content-container').style.display = 'flex';
         audio.play();
+
     });
 
     showSlide(currentSlide); // Show the first slide initially
